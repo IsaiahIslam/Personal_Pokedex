@@ -1,0 +1,39 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+  background-image:url(background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+header{
+  display: inline-block;
+  background-color: white;
+  border: 10px solid red;
+  width:98.45%;
+}
+
+h1{
+  display: inline-block;
+  color: yellow;
+  text-shadow: 2px 2px blue;
+}
+.leftPokeball{
+  float: left;
+  display: inline-block;
+}
+
+.rightPokeball{
+  float: right;
+  display: inline-block;
+}
+
+.titleImg{
+  width:100px
+}
+
+.trainerH1{
+  margin: 0 auto
+}
