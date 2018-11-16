@@ -49,10 +49,6 @@ section h2{
   font-size: 37px;
 }
 
-section div{
-  background-color: red
-}
-
 section h3{
   float: right;
   background-color: red;
@@ -64,4 +60,5 @@ section h3{
   border-bottom-left-radius: 50px;
   font-weight: normal;
   display: block;
+  clear: right;
 }
