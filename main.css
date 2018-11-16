@@ -23,17 +23,45 @@ h1{
 .leftPokeball{
   float: left;
   display: inline-block;
+  width: 100px
 }
 
 .rightPokeball{
   float: right;
   display: inline-block;
+  width: 100px
 }
 
-.titleImg{
-  width:100px
+section img{
+  float: left;
+  margin-left: 100px;
 }
 
-.trainerH1{
-  margin: 0 auto
+section h2{
+  float: right;
+  background-color: red;
+  padding: 10px 250px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 100px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 50px;
+  font-size: 37px;
+}
+
+section div{
+  background-color: red
+}
+
+section h3{
+  float: right;
+  background-color: red;
+  padding: 10px 100px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 100px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 50px;
+  font-weight: normal;
+  display: block;
 }
