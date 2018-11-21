@@ -62,3 +62,7 @@ section h3{
   display: block;
   clear: right;
 }
+
+.pokemonSection{
+  background-color: red;
+}
