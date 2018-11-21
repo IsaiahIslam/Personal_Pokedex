@@ -32,12 +32,12 @@ h1{
   width: 100px
 }
 
-section img{
+.img{
   float: left;
   margin-left: 100px;
 }
 
-section h2{
+.h2{
   float: right;
   background-color: red;
   padding: 10px 250px;
@@ -49,7 +49,7 @@ section h2{
   font-size: 37px;
 }
 
-section h3{
+.h3{
   float: right;
   background-color: red;
   padding: 10px 100px;
@@ -66,3 +66,28 @@ section h3{
 .pokemonSection{
   background-color: red;
 }
+
+.imageSize{
+  width: 200px;
+  height: 150px;
+}
+
+#part2{
+  /* height: 800px; */
+  display: inline-block;
+  background-color: red;
+
+}
+
+/* #pokemonImage1{
+  width: 200px;
+  display: inline-block;
+}
+#pokemonImage2{
+  width: 200px;
+  display: inline-block;
+}
+#pokemonImage3{
+  width: 200px;
+  display: inline-block;
+} */
