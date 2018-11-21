@@ -83,6 +83,7 @@ let gallade_hp;
 let gallade_attack;
 let gallade_defense;
 let gallade_ability;
+let gallade1;
 axios.get("http://fizal.me/pokeapi/api/v2/name/gallade.json")
   .then(gallade)
   function gallade(response){
@@ -94,6 +95,9 @@ axios.get("http://fizal.me/pokeapi/api/v2/name/gallade.json")
     console.log(response.data);
     console.log(gallade_name);
     console.log(gallade_attack);
+    gallade1 = new Pokemon(gallade_name, gallade_hp, gallade_attack, gallade_defense, gallade_ability,);
+    console.log(gallade);
+    gallade1.display();
   }
 
 let lucario_name;
@@ -101,6 +105,7 @@ let lucario_hp;
 let lucario_attack;
 let lucario_defense;
 let lucario_ability;
+let lucario1;
 axios.get("http://fizal.me/pokeapi/api/v2/name/lucario.json")
   .then(lucario)
   function lucario(response){
@@ -112,13 +117,16 @@ axios.get("http://fizal.me/pokeapi/api/v2/name/lucario.json")
     console.log(response.data);
     console.log(lucario_name);
     console.log(lucario_attack);
+    lucario1 = new Pokemon(lucario_name, lucario_hp, lucario_attack, lucario_defense, lucario_ability,);
+     lucario1.display();
   }
 
 let absol_name;
 let absol_hp;
-let absol_attack
-let absol_defense
-let absol_ability
+let absol_attack;
+let absol_defense;
+let absol_ability;
+let absol1;
 axios.get("http://fizal.me/pokeapi/api/v2/name/absol.json")
   .then(absol)
   function absol(response){
@@ -130,19 +138,11 @@ axios.get("http://fizal.me/pokeapi/api/v2/name/absol.json")
     console.log(response.data);
     console.log(absol_name);
     console.log(absol_attack);
+    absol1 = new Pokemon(absol_name, absol_hp, absol_attack, absol_defense, absol_ability,);
+    // absol1.display();
   }
 
     // let gallade_ability = response.data.abilities[0].ability.name;
     // console.log(gallade_ability);
     // for (let i = 0; i < response.data.abilities[i].ability.length; i++)
     //   let result = response.data.abilities[i].ability.name;
-
-
-    gallade = new Pokemon(gallade_name, gallade_hp, gallade_attack, gallade_defense, gallade_ability,);
-    gallade.display();
-
-    lucario = new Pokemon(lucario_name, lucario_hp, lucario_attack, lucario_defense, lucario_ability,);
-    lucario.display();
-
-    absol = new Pokemon(absol_name, absol_hp, absol_attack, absol_defense, absol_ability,);
-    absol.display();
