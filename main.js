@@ -5,14 +5,11 @@ class Pokemon {
     this.attack = attack;
     this.defense = defense;
     this.ability = ability;
-    this.container = document.getElementById('pokemons');
-    this.element = document.createElement("div");
-    this.element.className = 'poke_products';
   }
 
   display(){
     let name1 = document.getElementById('name1');
-    name1.innerHTML = "Name: " + this.name;
+    name1.innerHTML = this.name;
 
     let hp1 = document.getElementById('HP1');
     hp1.innerHTML = "HP: " + this.hp;
@@ -28,7 +25,7 @@ class Pokemon {
 
 
     let name2 = document.getElementById('name2');
-    name2.innerHTML = "Name: " + this.name;
+    name2.innerHTML = this.name;
 
     let hp2 = document.getElementById('HP2');
     hp2.innerHTML = "HP: " + this.hp;
@@ -44,7 +41,7 @@ class Pokemon {
 
 
     let name3 = document.getElementById('name3');
-    name3.innerHTML = "Name: " + this.name;
+    name3.innerHTML = this.name;
 
     let hp3 = document.getElementById('HP3');
     hp3.innerHTML = "HP: " + this.hp;
@@ -60,44 +57,24 @@ class Pokemon {
   }
 }
 
-class Trainer {
-  constructor(pokemon) {
-    this.pokemon = [];
-  }
-
-  all () {
-    return this.pokemon
-  }
-
-  get (name) {
-    for (let i = 0; i < this.pokemon.length; i++) {
-      if (name === this.pokemon.length[i].name) {
-        return this.pokemon[i];
-      }
-    }
-  }
-}
 
 let gallade_name;
 let gallade_hp;
 let gallade_attack;
 let gallade_defense;
 let gallade_ability;
-let gallade1;
+let gallade;
 axios.get("http://fizal.me/pokeapi/api/v2/name/gallade.json")
-  .then(gallade)
-  function gallade(response){
+  .then(pokemon1)
+  function pokemon1(response){
     gallade_name = response.data.species.name;
     gallade_hp = response.data.stats[5].base_stat;
     gallade_attack = response.data.stats[4].base_stat;
     gallade_defense = response.data.stats[3].base_stat;
-    gallade_ability = response.data.abilities[0].ability.name
+    gallade_ability = response.data.abilities[0].ability.name;
     console.log(response.data);
-    console.log(gallade_name);
-    console.log(gallade_attack);
-    gallade1 = new Pokemon(gallade_name, gallade_hp, gallade_attack, gallade_defense, gallade_ability,);
-    console.log(gallade);
-    gallade1.display();
+    gallade = new Pokemon(gallade_name, gallade_hp, gallade_attack, gallade_defense, gallade_ability,);
+    gallade.display();
   }
 
 let lucario_name;
@@ -105,20 +82,18 @@ let lucario_hp;
 let lucario_attack;
 let lucario_defense;
 let lucario_ability;
-let lucario1;
+let lucario;
 axios.get("http://fizal.me/pokeapi/api/v2/name/lucario.json")
-  .then(lucario)
-  function lucario(response){
+  .then(pokemon2)
+  function pokemon2(response){
     lucario_name = response.data.species.name;
     lucario_hp = response.data.stats[5].base_stat;
     lucario_attack = response.data.stats[4].base_stat;
     lucario_defense = response.data.stats[3].base_stat;
-    lucario_ability = response.data.abilities[0].ability.name
+    lucario_ability = response.data.abilities[0].ability.name;
     console.log(response.data);
-    console.log(lucario_name);
-    console.log(lucario_attack);
-    lucario1 = new Pokemon(lucario_name, lucario_hp, lucario_attack, lucario_defense, lucario_ability,);
-     lucario1.display();
+    lucario = new Pokemon(lucario_name, lucario_hp, lucario_attack, lucario_defense, lucario_ability,);
+    lucario.display();
   }
 
 let absol_name;
@@ -126,22 +101,39 @@ let absol_hp;
 let absol_attack;
 let absol_defense;
 let absol_ability;
-let absol1;
+let absol;
 axios.get("http://fizal.me/pokeapi/api/v2/name/absol.json")
-  .then(absol)
-  function absol(response){
+  .then(pokemon3)
+  function pokemon3(response){
     absol_name = response.data.species.name;
     absol_hp = response.data.stats[5].base_stat;
     absol_attack = response.data.stats[4].base_stat;
     absol_defense = response.data.stats[3].base_stat;
-    absol_ability = response.data.abilities[0].ability.name
+    absol_ability = response.data.abilities[0].ability.name;
     console.log(response.data);
-    console.log(absol_name);
-    console.log(absol_attack);
-    absol1 = new Pokemon(absol_name, absol_hp, absol_attack, absol_defense, absol_ability,);
-    // absol1.display();
+    absol = new Pokemon(absol_name, absol_hp, absol_attack, absol_defense, absol_ability,);
+    absol.display();
   }
 
+  class Trainer{
+    constructor(pokemon){
+      this.pokemon = [];
+    }
+    all(){
+      return this.pokemon
+    }
+    add(data){
+      this.pokemon.push(data)
+    }
+    get(name){
+      for (let i = 0; i < this.pokemon.length; i++) {
+        if (name === this.pokemon.length[i].name) {
+          return this.pokemon[i];
+        }
+      }
+    }
+  }
+  let dos = new Trainer();
     // let gallade_ability = response.data.abilities[0].ability.name;
     // console.log(gallade_ability);
     // for (let i = 0; i < response.data.abilities[i].ability.length; i++)
