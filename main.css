@@ -75,8 +75,19 @@ h1{
 #part2{
   display: inline-block;
   background-color: red;
-  margin-left: 50px;
   padding-left: 100px;
   padding-right: 100px;
 
+}
+
+#namegallade{
+  text-transform: capitalize;
+}
+
+#namelucario{
+  text-transform: capitalize;
+}
+
+#nameabsol{
+  text-transform: capitalize;
 }
