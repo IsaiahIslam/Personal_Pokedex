@@ -73,7 +73,6 @@ h1{
 }
 
 #part2{
-  /* height: 800px; */
   display: inline-block;
   background-color: red;
   margin-left: 50px;
@@ -81,16 +80,3 @@ h1{
   padding-right: 100px;
 
 }
-
-/* #pokemonImage1{
-  width: 200px;
-  display: inline-block;
-}
-#pokemonImage2{
-  width: 200px;
-  display: inline-block;
-}
-#pokemonImage3{
-  width: 200px;
-  display: inline-block;
-} */
