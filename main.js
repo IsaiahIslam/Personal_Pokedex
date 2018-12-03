@@ -28,7 +28,7 @@ class Pokemon {
     defense.innerHTML = "Defense: " + this.defense;
 
     let specialDefense = document.getElementById('SpecialDefense' + this.name);
-    specialDefense.innerHTML = "SpecialDefense: " + this.specialDefense;
+    specialDefense.innerHTML = "Special Defense: " + this.specialDefense;
 
     let speed = document.getElementById('Speed' + this.name);
     speed.innerHTML = "Speed: " + this.speed;
