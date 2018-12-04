@@ -96,7 +96,9 @@ h1{
   float: left;
   background-color: white;
   border-radius: 50px;
+  border-style: solid;
   border-color: black;
   padding: 20px;
   font-size: 20px;
+  font-weight: bold;
 }
