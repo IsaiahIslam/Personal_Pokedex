@@ -11,7 +11,7 @@ body{
 header{
   display: inline-block;
   background-color: white;
-  border: 10px solid red;
+  border: 10px solid #ff3333;
   width:100%;
 }
 
@@ -40,7 +40,7 @@ h1{
 
 .h2{
   float: right;
-  background-color: red;
+  background-color: #ff3333;
   padding: 10px 250px;
   margin-top: 10px;
   margin-bottom: 10px;
@@ -52,7 +52,7 @@ h1{
 
 .h3{
   float: right;
-  background-color: red;
+  background-color: #ff3333;
   padding: 10px 100px;
   margin-top: 10px;
   margin-bottom: 10px;
@@ -65,7 +65,7 @@ h1{
 }
 
 .pokemonSection{
-  background-color: red;
+  background-color: #ff3333;
 }
 
 .imageSize{
@@ -75,9 +75,19 @@ h1{
 
 #part2{
   display: inline-block;
-  background-color: red;
+  display: none;
+  background-color: #ff3333;
   padding-left: 100px;
   padding-right: 100px;
+}
+
+#megaPokemon{
+  display: inline-block;
+  /* display: none; */
+  background-color: #ff3333;
+  padding-left: 100px;
+  padding-right: 100px;
+  z-index: 2;
 }
 
 #namegallade{

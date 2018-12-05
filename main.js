@@ -71,6 +71,7 @@ axios.get("https://fizal.me/pokeapi/api/v2/name/gallade.json")
     console.log(response.data);
     gallade = new Pokemon(gallade_name, gallade_hp, gallade_attack, gallade_specialAttack, gallade_defense, gallade_specialDefense, gallade_speed, gallade_abilities);
     gallade.display();
+    dos.add(gallade);
   }
 
 let lucario_name;
@@ -104,6 +105,7 @@ axios.get("https://fizal.me/pokeapi/api/v2/name/lucario.json")
     console.log(response.data);
     lucario = new Pokemon(lucario_name, lucario_hp, lucario_attack, lucario_specialAttack, lucario_defense, lucario_specialDefense, lucario_speed, lucario_abilities);
     lucario.display();
+    dos.add(lucario);
   }
 
 let absol_name;
@@ -137,6 +139,7 @@ axios.get("https://fizal.me/pokeapi/api/v2/name/absol.json")
     console.log(response.data);
     absol = new Pokemon(absol_name, absol_hp, absol_attack, absol_specialAttack, absol_defense, absol_specialDefense, absol_speed, absol_abilities);
     absol.display();
+    dos.add(absol)
   }
 
   class Trainer{
@@ -152,9 +155,12 @@ axios.get("https://fizal.me/pokeapi/api/v2/name/absol.json")
     get(name){
       for (let i = 0; i < this.pokemon.length; i++) {
         if (name === this.pokemon.length[i].name) {
-          return this.pokemon[i];
+          counter.push(this.pokemon[i]);
+          return counter;
         }
       }
     }
   }
   let dos = new Trainer();
+
+  
