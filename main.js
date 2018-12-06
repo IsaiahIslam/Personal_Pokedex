@@ -163,4 +163,20 @@ axios.get("https://fizal.me/pokeapi/api/v2/name/absol.json")
   }
   let dos = new Trainer();
 
-  
+  let button = getElementsByClassName('megaStone');
+
+  let normalDisplay = getElementById('part2');
+
+  let megaDisplay = getElementById('megaPokemon');
+
+  function showMega(){
+    normalDisplay.style.display = 'inline-block';
+  }
+
+  function hideMega(){
+    normalDisplay.style.display = 'none';
+  }
+
+  button.addEventListener('click', showMega);
+
+  button.addEventListener('click', hideMega);
