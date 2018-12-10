@@ -163,20 +163,68 @@ axios.get("https://fizal.me/pokeapi/api/v2/name/absol.json")
   }
   let dos = new Trainer();
 
-  let button = getElementsByClassName('megaStone');
+  let button1 = document.getElementById('megaStone');
+  let button2 = document.getElementById('megaStone2');
+  let button3 = document.getElementById('megaStone3');
+  let button4 = document.getElementById('megaStone4');
+  let button5 = document.getElementById('megaStone5');
+  let button6 = document.getElementById('megaStone6');
 
-  let normalDisplay = getElementById('part2');
+  let normalDisplayG = document.getElementById('normalGallade');
+  let normalDisplayL = document.getElementById('normalLucario');
+  let normalDisplayA = document.getElementById('normalAbsol');
+  let megaDisplayG = document.getElementById('megaGallade');
+  let megaDisplayL = document.getElementById('megaLucario');
+  let megaDisplayA = document.getElementById('megaAbsol');
 
-  let megaDisplay = getElementById('megaPokemon');
-
-  function showMega(){
-    normalDisplay.style.display = 'inline-block';
+  function hideNormalG(){
+    console.log(normalDisplayG.style.zIndex);
+     if (normalDisplayG.style.zIndex !== -20) {
+       normalDisplayG.style.zIndex = -20;
+       megaDisplayG.style.zIndex = 20;
+     }
   }
 
-  function hideMega(){
-    normalDisplay.style.display = 'none';
+  function hideNormalL(){
+    console.log(normalDisplayL.style.zIndex);
+     if (normalDisplayL.style.zIndex !== -20) {
+       normalDisplayL.style.zIndex = -20;
+       megaDisplayL.style.zIndex = 20;
+     }
   }
 
-  button.addEventListener('click', showMega);
+  function hideNormalA(){
+    console.log(normalDisplayA.style.zIndex);
+     if (normalDisplayA.style.zIndex !== -20) {
+       normalDisplayA.style.zIndex = -20;
+       megaDisplayA.style.zIndex = 20;
+     }
+  }
 
-  button.addEventListener('click', hideMega);
+  function hideMegaG(){
+    if (megaDisplayG.style.zIndex !== -20) {
+      megaDisplayG.style.zIndex = -20;
+      normalDisplayG.stlye.zIndex = 20
+    }
+  }
+
+  function hideMegaL(){
+    if (megaDisplayL.style.zIndex !== -20) {
+      megaDisplayL.style.zIndex = -20;
+      normalDisplayL.stlye.zIndex = 20
+    }
+  }
+
+  function hideMegaA(){
+    if (megaDisplayA.style.zIndex !== -20) {
+      megaDisplayA.style.zIndex = -20;
+      normalDisplayA.stlye.zIndex = 20
+    }
+  }
+
+  button1.addEventListener('click', hideNormalG);
+  button2.addEventListener('click', hideNormalL);
+  button3.addEventListener('click', hideNormalA);
+  button4.addEventListener('click', hideMegaG);
+  button5.addEventListener('click', hideMegaL);
+  button6.addEventListener('click', hideMegaA);

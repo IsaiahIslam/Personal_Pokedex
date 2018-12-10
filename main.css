@@ -80,15 +80,6 @@ h1{
   padding-right: 100px;
 }
 
-#megaPokemon{
-  display: inline-block;
-  display: none;
-  background-color: #ff3333;
-  padding-left: 100px;
-  padding-right: 100px;
-  z-index: 2;
-}
-
 #namegallade{
   text-transform: capitalize;
 }
@@ -103,22 +94,89 @@ h1{
 
 #trainer_text{
   float: left;
-  background-color: white;
-  border-radius: 50px;
-  border-style: solid;
-  border-color: black;
-  padding: 20px;
-  font-size: 20px;
-  font-weight: bold;
+  width: 550px;
 }
 
-.megaStone{
+#megaStone{
   border-radius: 360px;
   width: 100px;
   cursor: pointer;
 }
 
-.megaStone:hover {
-  display: inline;
-  width: 110px
+#megaStone2{
+  border-radius: 360px;
+  width: 100px;
+  cursor: pointer;
+}
+
+#megaStone3{
+  border-radius: 360px;
+  width: 100px;
+  cursor: pointer;
+}
+
+#megaStone4{
+  border-radius: 360px;
+  width: 100px;
+  cursor: pointer;
+}
+
+#megaStone5{
+  border-radius: 360px;
+  width: 100px;
+  cursor: pointer;
+}
+
+#megaStone6{
+  border-radius: 360px;
+  width: 100px;
+  cursor: pointer;
+}
+
+#normalGallade{
+  display: inline-block;
+  /* position: relative; */
+  z-index: 20;
+  background-color: #ff3333;
+}
+
+#normalLucario{
+  display: inline-block;
+  /* position: relative; */
+  z-index: 20;
+  background-color: #ff3333;
+}
+
+#normalAbsol{
+  display: inline-block;
+  /* position: relative; */
+  z-index: 20;
+  background-color: #ff3333;
+}
+
+#megaGallade{
+  display:  inline-block;
+  position: absolute;
+  top: 0px;
+  right: 15px;
+  z-index: -20;
+  background-color: #ff3333;
+}
+
+#megaLucario{
+  display:  inline-block;
+  position: absolute;
+  top: 0px;
+  right: 15px;
+  z-index: -20;
+  background-color: #ff3333;
+}
+
+#megaAbsol{
+  display:  inline-block;
+  position: absolute;
+  top: 0px;
+  right: 15px;
+  z-index: -20;
+  background-color: #ff3333;
 }
